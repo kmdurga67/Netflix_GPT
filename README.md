@@ -10,7 +10,12 @@
 - useRef hook
 - Deploying our app to production
 - Create Sign Up User Account
-
+- Implemented sign in user API
+- Create redux store with userSlice
+- Updating userSlice with user information
+- Implemented SignOut Page
+- Profile Update
+- Fetch Movies from TMDB Database APIs
 
 # Features
 - Login / Sign Up page
