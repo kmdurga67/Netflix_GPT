@@ -16,6 +16,8 @@
 - Implemented SignOut Page
 - Profile Update
 - Fetch Movies from TMDB Database APIs
+- Register for TMDB API & create an app & get access token
+- 
 
 # Features
 - Login / Sign Up page

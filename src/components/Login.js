@@ -8,7 +8,8 @@ import {
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
-import { addUser } from "../utils/userSlice";
+import { addUser } from "../store/userSlice";
+import { USER_AVTAR, BACKGROUND_IMAGE } from "../utils/constants";
 
 const Login = () => {
   const [isSignForm, setIsSignForm] = useState(true);
@@ -42,7 +43,7 @@ const Login = () => {
           const user = userCrediential.user;
           updateProfile(user, {
             displayName: fullName.current.value,
-            photoURL: "https://avatars.githubusercontent.com/u/86108132?v=4",
+            photoURL: USER_AVTAR,
           })
             .then(() => {
               const { uid, email, password, photoURL } = auth.currentUser;
@@ -94,7 +95,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://miro.medium.com/v2/resize:fit:1400/1*5lyavS59mazOFnb55Z6znQ.png"
+          src={BACKGROUND_IMAGE}
           alt="No Images found"
           className="background-image"
         />
