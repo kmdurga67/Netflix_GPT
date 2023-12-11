@@ -17,7 +17,13 @@
 - Profile Update
 - Fetch Movies from TMDB Database APIs
 - Register for TMDB API & create an app & get access token
-- 
+- created custom hook for now playing movies
+- created movieSlice
+- update store with movie data
+- fetch data for trailer video
+- updated store of video data
+- embeded the youtube video make it autoplayed & muted
+- added tail wind css
 
 # Features
 - Login / Sign Up page
