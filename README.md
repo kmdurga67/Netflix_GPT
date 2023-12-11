@@ -24,6 +24,10 @@
 - updated store of video data
 - embeded the youtube video make it autoplayed & muted
 - added tail wind css
+- Build Secondary Component
+- Build Movie List
+- Build Movie Card
+- Gpt Search feature
 
 # Features
 - Login / Sign Up page
