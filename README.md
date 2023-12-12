@@ -30,6 +30,12 @@
 - Gpt Search feature
 - Multi-language feature to application
 - Integrated Open AI APIs
+- Gpt Search Api call
+- Fetched gpt movie suggestions from TMDB
+- Create gptSlice added data
+- Memoization
+- Added .env file 
+- Made application responsive
 
 # Features
 - Login / Sign Up page

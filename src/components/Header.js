@@ -60,10 +60,10 @@ const Header = () => {
   }
 
   return (
-    <div className="absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-full flex justify-between">
-      <img src={LOGO} alt="Logo" className="w-48" />
+    <div className="absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-full flex flex-col md:flex-row justify-between md:justify-between">
+      <img src={LOGO} alt="Logo" className="w-48 mx-auto md:mx-0" />
       {user && (
-        <div className="flex p-2">
+        <div className="flex p-2 justify-between">
          {showGPTSearch && <select className="p-2 bg-gray-500 text-white m-4" onChange={handleLanguageChange}>
             {SUPPORTED_LANGUAGES.map((lang) => (
               <option value={lang.identifier} key={lang.identifier}>
@@ -81,7 +81,7 @@ const Header = () => {
           <img
             src={user.photoURL ? user.photoURL : { USER_DEFAULT_AVTAR }}
             alt="signout"
-            className="w-16 h-16 pt-2 mt-3 rounded-3xl mr-1"
+            className="w-16 h-16 pt-2 mt-3 rounded-3xl mr-1 hidden md:block"
           />
           <button className="font-bold text-white" onClick={handleSignOut}>
             Sign Out

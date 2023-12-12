@@ -33,11 +33,9 @@ const GptSearchBar = () => {
       model: "gpt-3.5-turbo",
     });
 
-    console.log(searchTxt.current.value);
     if (!gptResults.choices) {
       //handle error
     }
-    console.log(gptResults.choices?.[0]?.message?.content);
 
     // "Andaz Apna Apna, Hera Pheri, Chupke Chupke, Jaane Bhi Do Yaaro, Padosan";
     const gptMovies = gptResults.choices?.[0]?.message?.content.split(", ");
@@ -49,9 +47,9 @@ const GptSearchBar = () => {
   };
 
   return (
-    <div className="pt-[8%] flex justify-center">
+    <div className="pt-[30%] md:pt-[8%] flex justify-center">
       <form
-        className="bg-black w-1/2 grid grid-cols-12"
+        className="w-full bg-black md:w-1/2 grid grid-cols-12"
         onSubmit={(e) => e.preventDefault()}
       >
         <input
