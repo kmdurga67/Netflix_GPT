@@ -1,3 +1,6 @@
+const tmdbAPI = process.env.REACT_APP_TMDB_KEY;
+const openAI = process.env.REACT_APP_OPENAI_KEY;
+
 export const LOGO =
   "https://images.ctfassets.net/4cd45et68cgf/7LrExJ6PAj6MSIPkDyCO86/542b1dfabbf3959908f69be546879952/Netflix-Brand-Logo.png?w=700&h=500";
 
@@ -23,4 +26,4 @@ export const IMG_CDN = "https://image.tmdb.org/t/p/w500";
 
 export const SUPPORTED_LANGUAGES = [{identifier:"en", name:"English"},{identifier:"hindi", name:"Hindi"},{identifier:"spanish", name:"Spanish"}];
 
-export const openAIKey = "Your-api-key";
+export const openAIKey = openAI;
