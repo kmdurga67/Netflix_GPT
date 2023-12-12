@@ -28,6 +28,8 @@
 - Build Movie List
 - Build Movie Card
 - Gpt Search feature
+- Multi-language feature to application
+- Integrated Open AI APIs
 
 # Features
 - Login / Sign Up page

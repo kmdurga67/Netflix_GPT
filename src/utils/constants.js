@@ -8,7 +8,7 @@ export const BACKGROUND_IMAGE =
   "https://miro.medium.com/v2/resize:fit:1400/1*5lyavS59mazOFnb55Z6znQ.png";
 
 export const USER_AVTAR =
-  "https://avatars.githubusercontent.com/u/86108132?v=4";
+  "https://www.shutterstock.com/image-vector/vector-emoji-smiling-face-smile-260nw-1271016607.jpg";
 
 export const API_OPTIONS = {
   method: "GET",
@@ -20,3 +20,5 @@ export const API_OPTIONS = {
 };
 
 export const IMG_CDN = "https://image.tmdb.org/t/p/w500";
+
+export const SUPPORTED_LANGUAGES = [{identifier:"en", name:"English"},{identifier:"hindi", name:"Hindi"},{identifier:"spanish", name:"Spanish"}]
