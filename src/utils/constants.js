@@ -23,4 +23,4 @@ export const IMG_CDN = "https://image.tmdb.org/t/p/w500";
 
 export const SUPPORTED_LANGUAGES = [{identifier:"en", name:"English"},{identifier:"hindi", name:"Hindi"},{identifier:"spanish", name:"Spanish"}];
 
-export const openAIKey = "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";
+export const openAIKey = "Your-api-key";
