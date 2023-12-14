@@ -12,33 +12,33 @@ const GptSearchBar = () => {
 
   const searchMovieTMDB = async (movie) => {
     const data = await fetch(
-      "https://api.themoviedb.org/3/search/movie?query=" +
-        movie +
-        "&include_adult=false&page=1",
+      `https://api.themoviedb.org/3/search/movie?query=${movie}&include_adult=false&language=en-US&page=1`,
       API_OPTIONS
     );
 
-    const json = data.json();
+    const json =await data.json();
 
     return json.results;
   };
 
   const handleGptSearchClick = async () => {
-    const getQuery =
-      "Act as a Movie Recommendation system & suggest some movie for the query:" +
-      searchTxt.current.value +
-      "only give me names of 5 movies, comma seperated like the example example result given ahead. Example Result: Gadar, Sholey, Dunki, Animal, DDLJ";
-    const gptResults = await openai.chat.completions.create({
-      messages: [{ role: "user", content: getQuery }],
-      model: "gpt-3.5-turbo",
-    });
+    // const getQuery =
+    //   "Act as a Movie Recommendation system & suggest some movie for the query:" +
+    //   searchTxt.current.value +
+    //   "only give me names of 5 movies, comma seperated like the example example result given ahead. Example Result: Gadar, Sholey, Dunki, Animal, DDLJ";
+    // const gptResults = await openai.chat.completions.create({
+    //   messages: [{ role: "user", content: getQuery }],
+    //   model: "gpt-3.5-turbo",
+    // });
 
-    if (!gptResults.choices) {
-      //handle error
-    }
+    // if (!gptResults.choices) {
+    //   //handle error
+    // }
 
-    // "Andaz Apna Apna, Hera Pheri, Chupke Chupke, Jaane Bhi Do Yaaro, Padosan";
-    const gptMovies = gptResults.choices?.[0]?.message?.content.split(", ");
+    const gptResult =  "Andaz Apna Apna, Hera Pheri, Chupke Chupke, Jaane Bhi Do Yaaro, Padosan, Dilwale Dulhania Le Jayenge, Kuch Kuch Hota Hai, Jab Tak Hai Jaan, Hum Dil De Chuke Sanam, Kabhi Khushi Kabhie Gham, Kal Ho Naa Ho, Veer-Zaara, Dil To Pagal Hai, Mohabbatein, Jabariya Jodi, Yeh Jawaani Hai Deewani, Rab Ne Bana Di Jodi, Ae Dil Hai Mushkil, Main Hoon Na, Barfi!, Raaz, 1920, Alone, Raaz: The Mystery Continues, Haunted - 3D, Ek Thi Daayan, Creature 3D, Dobaara: See Your Evil, Stree ";
+    const gptMovies = gptResult.split(", ");
+    const gptResults = gptResult.split(",");
+    // const gptMovies = gptResults.choices?.[0]?.message?.content.split(", ");
 
     const promiseArray = gptMovies.map((movie) => searchMovieTMDB(movie));
 
